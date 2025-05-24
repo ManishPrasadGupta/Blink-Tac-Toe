@@ -1,5 +1,6 @@
 import { useState } from "react";
 import StartGameUi from "./ui/startGameUi";
+import Rule from "../rules";
 
 function parseEmojis(input) {
   return input
@@ -39,11 +40,15 @@ export default function StartGame({ onStart }) {
   };
 
   return (
+    <div>
+
     <StartGameUi
       playerInputs={playerInputs}
       onInputChange={handleChange}
       bothPlayersReady={bothPlayersReady}
       onStart={handleStart}
-    />
+      />
+      </div>
+
   );
 }

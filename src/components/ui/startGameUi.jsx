@@ -1,11 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
+
+
 
 export default function StartGameUi({
   playerInputs,
   onInputChange,
   bothPlayersReady,
   onStart,
+
 }) {
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-400 via-pink-300 to-yellow-200">
       <div className="
@@ -82,19 +86,29 @@ export default function StartGameUi({
             );
           })}
         </div>
-        {/* Button always at bottom */}
-        <button
-          className={`w-full py-3 text-lg font-bold rounded-2xl shadow-lg transition-all duration-200 tracking-wide
-            ${
-              bothPlayersReady
-                ? "bg-gradient-to-r from-green-400 via-lime-300 to-yellow-300 text-slate-900 hover:scale-105 hover:brightness-110 active:scale-95"
-                : "bg-gray-300 text-gray-400 cursor-not-allowed"
-            }`}
-          disabled={!bothPlayersReady}
-          onClick={onStart}
-        >
-          🚀 Start Game
-        </button>
+
+        {/* Button */}
+        <div className="flex gap-4">
+          <button
+            className={`flex-1 py-3 text-lg font-bold rounded-2xl shadow-lg transition-all duration-200 tracking-wide
+              ${
+                bothPlayersReady
+                  ? "bg-gradient-to-r from-green-400 via-lime-300 to-yellow-300 text-slate-900 hover:scale-105 hover:brightness-110 active:scale-95"
+                  : "bg-gray-300 text-gray-400 cursor-not-allowed"
+              }`}
+            disabled={!bothPlayersReady}
+            onClick={onStart}
+          >
+            Start Game
+          </button>
+          <Link
+            to="/Rule"
+            className="flex-1 py-3 text-lg font-bold rounded-2xl shadow-lg transition-all duration-200 tracking-wide bg-gradient-to-r from-green-400 via-lime-300 to-yellow-300 text-center text-slate-900 hover:scale-105 hover:brightness-110 active:scale-95"
+            >         
+            Game Rules
+          </Link>
+        </div>
+        
       </div>
     </div>
   );
