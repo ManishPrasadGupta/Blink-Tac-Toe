@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-
-
 export default function StartGameUi({
   playerInputs,
   onInputChange,
@@ -24,7 +22,7 @@ export default function StartGameUi({
         <div className="flex justify-center mb-2 text-5xl drop-shadow-lg">🎮</div>
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-6 text-slate-900 drop-shadow">
-          Emoji FIFO Tac Toe
+          Blink Tac Toe
         </h1>
 
         {/* Scrollable inputs */}

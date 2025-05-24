@@ -1,6 +1,5 @@
 import { useState } from "react";
 import StartGameUi from "./ui/startGameUi";
-import Rule from "../rules";
 
 function parseEmojis(input) {
   return input
